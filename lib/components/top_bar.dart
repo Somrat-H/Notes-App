@@ -15,6 +15,7 @@ class _TopBarState extends State<TopBar> {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
+          
           height: 50,
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
@@ -45,7 +46,9 @@ class _TopBarState extends State<TopBar> {
               IconButton(onPressed: (){}, icon: const Icon(Icons.grid_view,
               color: Colors.white,
               )),
-              const CircleAvatar(),
+              const CircleAvatar(
+                backgroundImage: AssetImage('image/avatar.jpg'),
+              ),
             ],
           ),
         ),
