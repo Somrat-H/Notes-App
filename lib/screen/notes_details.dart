@@ -12,12 +12,17 @@ class NotesDetails extends StatelessWidget{
   
   Function  onPressed;
   Function() onTap;
+  
+
   NotesDetails({super.key, required this.titileControler, required this.descriptionControler, required this.onPressed, required this.onTap});
+
+  Color backgroundColor = Colors.black;
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: backgroundColor,
       bottomNavigationBar: BottomBar(
         onTap: onTap,
       ),

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:keep_notes/components/bottom_bar.dart';
-
 import 'screen/home_screen.dart';
 
 void main() {
