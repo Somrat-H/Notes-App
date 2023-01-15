@@ -12,3 +12,5 @@ Color bgColor9 = Colors.black;
 Color bgDefault = Colors.black;
 Color backgroundColors = Colors.black;
 
+bool status = false;
+

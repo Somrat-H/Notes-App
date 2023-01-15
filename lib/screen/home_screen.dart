@@ -1,6 +1,9 @@
+// ignore_for_file: unnecessary_null_comparison
+
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:keep_notes/components/colors.dart';
 import 'package:keep_notes/components/list_tile.dart';
 import 'package:keep_notes/components/notes_create.dart';
 import 'package:keep_notes/components/top_bar.dart';
@@ -24,6 +27,8 @@ class _HomeScreenState extends State<HomeScreen> {
   TextEditingController titileControlerEdit = TextEditingController();
   TextEditingController descriptionControlerEdit = TextEditingController();
   SharedPreferences? sp;
+
+  bool status = false;
 
   @override
   void initState() {
@@ -99,11 +104,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       titileControler: titileControler,
                       descriptionControler: descriptionControler,
                       onPressed: () {
+                        if(titileControler.text != "" || descriptionControler.text != ""){
                         setState(() {
                          saveNotes();
                         });
                         descriptionControler.clear();
                         titileControler.clear();
+                        }
                       })));
         },
         backgroundColor: const Color.fromARGB(255, 61, 57, 57),
@@ -116,9 +123,19 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column( 
         children: [
-          const TopBar(),
+           TopBar(onPressed: () { 
+
+            setState(() {
+              status = !status;
+            });
+
+            }, status: status,
+
+          ),
           Expanded(
-            child: ListView.builder(
+           child: 
+           status  == false?
+            ListView.builder(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                 shrinkWrap: true,
@@ -147,7 +164,41 @@ class _HomeScreenState extends State<HomeScreen> {
                        editNotes(index, notes);   
                     }
                    );
-                }),
+                })
+                : 
+                 GridView.builder(
+      itemCount: notes.length,
+      gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                maxCrossAxisExtent: 200,
+                childAspectRatio: 3 / 2,
+                crossAxisSpacing: 20,
+                mainAxisSpacing: 20), 
+      itemBuilder: (context, index){
+        return  Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    border: Border.all(color: Colors.white.withOpacity(0.4)),
+                    borderRadius: BorderRadius.circular(7)),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(notes[index].title,
+                        style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold)),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      notes[index].description,
+                      style: const TextStyle(color: Colors.white, fontSize: 12),
+                    )
+                  ],
+                ),
+              );
+        
+      })
           ),
         ],
       ),

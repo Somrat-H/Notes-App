@@ -1,14 +1,10 @@
 
 import 'package:flutter/material.dart';
+class TopBar extends StatelessWidget {
+  bool status;
+  Function() onPressed;
+  TopBar({super.key, required this.status, required this.onPressed});
 
-class TopBar extends StatefulWidget {
-  const TopBar({super.key});
-
-  @override
-  State<TopBar> createState() => _TopBarState();
-}
-
-class _TopBarState extends State<TopBar> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -43,7 +39,9 @@ class _TopBarState extends State<TopBar> {
                   ),
                 ),
               ),
-              IconButton(onPressed: (){}, icon: const Icon(Icons.grid_view,
+              IconButton(onPressed: onPressed, icon: status == false ? const Icon(Icons.list,
+              color: Colors.white,
+              ): const Icon(Icons.grid_view,
               color: Colors.white,
               )),
               const CircleAvatar(
@@ -53,6 +51,6 @@ class _TopBarState extends State<TopBar> {
           ),
         ),
       ),
-    );
+    );;
   }
 }
