@@ -123,7 +123,7 @@ class _BottomBarState extends State<BottomBar> {
                                 top: bgColor8,
                                
                               ),
-                              SizedBox(width: 10,),
+                              const SizedBox(width: 10,),
                               RoundContainer(
                                 top: bgColor9,
                                

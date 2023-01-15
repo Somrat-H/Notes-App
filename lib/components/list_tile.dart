@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class NotesTile extends StatelessWidget {
   final String notesTitle;
   final String notesDescription;

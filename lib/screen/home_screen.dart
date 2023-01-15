@@ -1,9 +1,8 @@
-// ignore_for_file: unnecessary_null_comparison
 
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:keep_notes/components/colors.dart';
+
 import 'package:keep_notes/components/list_tile.dart';
 import 'package:keep_notes/components/notes_create.dart';
 import 'package:keep_notes/components/top_bar.dart';

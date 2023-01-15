@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+// ignore: must_be_immutable
 class TopBar extends StatelessWidget {
   bool status;
   Function() onPressed;
@@ -51,6 +52,6 @@ class TopBar extends StatelessWidget {
           ),
         ),
       ),
-    );;
+    );
   }
 }

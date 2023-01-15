@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:keep_notes/components/gird_container.dart';
 import 'screen/home_screen.dart';
 
 void main() {

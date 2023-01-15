@@ -1,7 +1,6 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:keep_notes/components/bottom_bar.dart';
 import 'package:keep_notes/screen/home_screen.dart';
 
 // ignore: must_be_immutable
