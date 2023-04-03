@@ -1,16 +1,16 @@
-# keep_notes
+# Notes App
 
-A new Flutter project.
+#Description
 
-## Getting Started
+This is simple note app using shared_preference local storage. This app UI clone from google keep notes. Also some function are same. 
+Here user can doing CRUD operation. User can select custom color. Also user can see their notes on list view and grid view both option available like google keep notes.
 
-This project is a starting point for a Flutter application.
+## Screenshots
 
-A few resources to get you started if this is your first Flutter project:
+![Notes App](https://user-images.githubusercontent.com/88571561/229608661-d7476ca9-256d-491c-ae97-011161fae483.jpg)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Authors
+
+- [@Somrat-H](https://www.github.com/Somrat-H)
+
