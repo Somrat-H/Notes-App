@@ -1,6 +1,6 @@
 # Notes App
 
-#Description
+## Description
 
 This is simple note app using shared_preference local storage. This app UI clone from google keep notes. Also some function are same. 
 Here user can doing CRUD operation. User can select custom color. Also user can see their notes on list view and grid view both option available like google keep notes.
